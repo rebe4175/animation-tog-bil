@@ -1,0 +1,150 @@
+body {
+
+    margin: 0;
+    padding: 0;
+}
+
+#scene {
+
+    width: 100vw;
+    /* svarer til 1600px */
+    height: 56.25vw;
+    /* svarer til 900 px */
+    position: relative;
+}
+
+#baggrund {
+
+    width: 100%;
+    height: 100%;
+
+
+    background-image: url(baggrund-01.svg);
+    background-size: 100%, 100%;
+}
+
+#bil {
+
+    /* for at regne ud hvor hvordan man sætter height og width, skal man hover over billedet (i dette tilfælde url(bil.svg) og se hvor mange pixels billedet er på. I dette tilfælde, er det 357x309 pixels. 16 pixels er 1vw, så vi dividere med 357/16 og 309 med 16. Så får vi 22.3vw x 19.31vw */
+    width: 22.3vw;
+    height: 19.31vw;
+    position: absolute;
+
+    top: 60vw;
+    left: 50vw;
+
+    transform: scale(1.8);
+    /*bilens størrelse i starten af billedet */
+    background-image: url(bil.svg);
+    background-size: 100%, 100%;
+
+    animation-name: bil;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+
+}
+
+#tog {
+
+    width: 71.3vw;
+    height: 10.3vw;
+
+    position: absolute;
+
+    top: 24.5vw;
+    left: 90vw;
+
+
+    background-image: url(tog.svg);
+    background-size: 100%;
+
+    animation-name: tog;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+
+
+
+}
+
+#bom {
+
+    width: 36.6vw;
+    height: 3.9vw;
+
+
+    position: absolute;
+    background-image: url(bom.svg);
+    background-size: 100%;
+
+    top: 32vw;
+    left: 30vw
+}
+
+
+#forgrund {
+
+    width: 100vw;
+    height: 56.25vw;
+
+    background-image: url(forgrund-01.svg);
+    background-size: 100%;
+
+    position: absolute;
+    top: 0vw
+}
+
+
+@keyframes bil {
+
+    from {
+        top: 60vw;
+        left: 50vw;
+        transform: scale(1.8);
+
+    }
+
+    to {
+
+        left: 39vw;
+        top: 9vw;
+
+        transform: scale(0.0)
+    }
+
+
+}
+
+@keyframes tog {
+
+    from {
+
+        top: 24.5vw;
+        left: 90vw;
+
+    }
+
+    to {
+
+        top: 24.5vw;
+        left: -90vw;
+
+    }
+}
+
+@keyframes bom {
+
+    from {
+
+        top: ??;
+        left: ??;
+    }
+
+    to {
+
+        top: ??;
+        left: ??;
+    }
+
+}
